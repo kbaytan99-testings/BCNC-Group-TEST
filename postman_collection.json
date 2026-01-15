@@ -1,0 +1,186 @@
+{
+  "info": {
+    "name": "Inditex Pricing Service API",
+    "description": "Collection for testing the Inditex Pricing Service REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Test 1 - 10:00 on June 14",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-14T10:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T10:00:00",
+              "description": "Application date and time"
+            },
+            {
+              "key": "productId",
+              "value": "35455",
+              "description": "Product identifier"
+            },
+            {
+              "key": "brandId",
+              "value": "1",
+              "description": "Brand identifier (1 = ZARA)"
+            }
+          ]
+        },
+        "description": "Expected: Price List 1, Price 35.50 EUR"
+      }
+    },
+    {
+      "name": "Test 2 - 16:00 on June 14",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-14T16:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T16:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Expected: Price List 2, Price 25.45 EUR"
+      }
+    },
+    {
+      "name": "Test 3 - 21:00 on June 14",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-14T21:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T21:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Expected: Price List 1, Price 35.50 EUR"
+      }
+    },
+    {
+      "name": "Test 4 - 10:00 on June 15",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-15T10:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-15T10:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Expected: Price List 3, Price 30.50 EUR"
+      }
+    },
+    {
+      "name": "Test 5 - 21:00 on June 16",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-16T21:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-16T21:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Expected: Price List 4, Price 38.95 EUR"
+      }
+    },
+    {
+      "name": "Error Test - Non-existent Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/prices?applicationDate=2020-06-14T10:00:00&productId=99999&brandId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "prices"],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T10:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "99999"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Expected: 404 Not Found"
+      }
+    }
+  ]
+}
