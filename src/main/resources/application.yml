@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: inditex-pricing-service
+  
+  # H2 Database Configuration
+  datasource:
+    url: jdbc:h2:mem:pricingdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  
+  # JPA Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  
+  # H2 Console (for development/debugging)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  # SQL Initialization
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+# Server Configuration
+server:
+  port: 8080
+
+# Logging Configuration
+logging:
+  level:
+    com.inditex.pricing: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
