@@ -36,6 +36,16 @@ spring:
 server:
   port: 8080
 
+# Actuator configuration for Docker health checks
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
 # Logging Configuration
 logging:
   level:

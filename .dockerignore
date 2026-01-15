@@ -1,0 +1,45 @@
+# .dockerignore - Archivos a excluir del contexto de Docker
+
+# Carpetas de build
+target/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Maven
+.mvn/
+mvn
+mvnw
+mvnw.cmd
+
+# Git
+.git/
+.gitignore
+
+# Documentación (ya está en el código)
+*.md
+!README.md
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests (ya se ejecutan en el build)
+src/test/
+
+# Scripts de instalación
+install-maven.ps1
+add-maven-to-path.ps1
+
+# Archivos temporales
+*.tmp
+*.swp
+*~

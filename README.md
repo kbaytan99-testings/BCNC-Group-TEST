@@ -101,7 +101,26 @@ La tabla cuenta con 3 índices para consultas eficientes:
 Esto garantiza una complejidad **O(log n)** en las búsquedas.
 
 ## � Instalación y Ejecución
+### 🐳 Opción 1: Docker (Recomendado)
 
+La forma más rápida de ejecutar la aplicación:
+
+```bash
+# Con Docker Compose
+docker-compose up -d
+
+# Ver logs
+docker-compose logs -f
+```
+
+**Ventajas:**
+- ✅ No requiere instalar Java ni Maven
+- ✅ Entorno aislado y reproducible
+- ✅ Configuración automática
+
+📖 **Guía completa:** [DOCKER.md](DOCKER.md)
+
+### ⚙️ Opción 2: Ejecución Local
 ### 1️⃣ Prerrequisitos
 
 - **Java 17** ([Descargar](https://www.oracle.com/java/technologies/downloads/#java17))
